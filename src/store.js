@@ -1,18 +1,15 @@
-import React from 'react'
-import {connect} from 'react-redux'
+import { createStore, combineReducers, compose, applyMiddleware } from 'redux'
+import thunk from 'redux-thunk'
 
-const Users = props => (
-    <div>
+const reducer = combineReducers({
 
-    </div>
+})
+
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
+
+export const store = createStore(
+    reducer,
+    composeEnhancers(
+        applyMiddleware(thunk)
+    )
 )
-
-const mapStateToProps = state => ({
-
-})
-
-const mapDispatchToProps = dispatch => ({
-    
-})
-
-export default connect()(Users)
