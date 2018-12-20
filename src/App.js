@@ -1,9 +1,17 @@
 import React from 'react';
 import Users from './Component'
 
-const App = props => (
-  <div>
-    <Users />
-  </div>
-)
-export default App;
+
+class App extends React.Component {
+  render() {
+    return (
+      <div>
+        <Users
+        />
+      </div>
+    );
+  }
+}
+
+
+export default App
